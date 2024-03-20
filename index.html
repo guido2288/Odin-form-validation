@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form Validation</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact us Form</h2>
+    <form action="#" id="form">
+
+      <div class="form-row">
+
+        <div class="input-data">
+          <input type="text" required minlength="3" maxlength="20" id="input-name" >
+          <div class="underline"></div>
+          <label for="">First Name</label>
+          <span id="span">Should not have numbers</span>
+        </div>
+
+        <div class="input-data">
+          <input type="text" required minlength="3" maxlength="20" id="input-lastName">
+          <div class="underline"></div>
+          <label for="">Last Name</label>
+          <span id="span">Should not have numbers</span>
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="input-data">
+          <input type="email" required id="input-email">
+          <div class="underline"></div>
+          <label for="">Email</label>
+          <span id="span">Must be valid email</span>
+        </div>
+
+        <div class="input-data">
+          <input  required list="l1" id="datalist">
+          <datalist id="l1">
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Chile">Chile</option>
+          </datalist>
+          <div class="underline"></div>
+          <label for="">Country</label>
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="input-data" id="zipcode">
+          <input type="text" required pattern="^[0-9]{5}(?:-[0-9]{4})?$" id="input-zipcode">
+          <div class="underline"></div>
+          <label for="">ZIP CODE</label>
+          <span id="span">Must be 5 digits</span>
+        </div>
+
+        <div class="input-data">
+          <input type="password" required id="password" min="8">
+          <div class="underline"></div>
+          <label for="">Password</label>
+          <span id="span">Between 8 and 16 characters</span>
+        </div>
+
+      </div>
+
+
+      <button type="submit" class="submit-btn">Sumbit</button>
+
+
+    </form>
+  </div>
+
+  <script src="./script.js  "></script>
+</body>
+</html>
